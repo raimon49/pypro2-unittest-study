@@ -1,6 +1,7 @@
 mock
 pip-tools
 pytest
+pytest-cov
 pytest-pep8
 pytest-pythonpath
 testfixtures
