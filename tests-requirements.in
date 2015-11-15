@@ -1,0 +1,7 @@
+mock
+pip-tools
+pytest
+pytest-pep8
+testfixtures
+tox
+webtest
