@@ -22,7 +22,9 @@ class TestBankAccount(unittest.TestCase):
         m = mock.Mock()
         m.returnValue = True
         target.must_fail = m
+        self.assertFalse(m.called)
         self.assertTrue(target.must_fail())
+        self.assertTrue(m.called)
 
     def test_construct(self):
         target = self._makeOne()
