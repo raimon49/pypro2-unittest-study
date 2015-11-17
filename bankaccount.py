@@ -5,10 +5,17 @@ class NoEnoughFundsException(Exception):
     """Not Enough Funds"""
 
 
+class DummyFailException(Exception):
+    """This is dummy"""
+
+
 class BankAccount(object):
 
     def __init__(self):
         self._balance = 0
+
+    def must_fail(self):
+        raise DummyFailException('This is dummy')
 
     def deposit(self, amount):
         self.balance += amount

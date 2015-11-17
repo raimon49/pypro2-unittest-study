@@ -11,6 +11,19 @@ class TestBankAccount(unittest.TestCase):
     def _makeOne(self, *args, **kwargs):
         return self._getTarget()(*args, **kwargs)
 
+    def test_must_fail(self):
+        target = self._makeOne()
+        from bankaccount import DummyFailException
+        with self.assertRaises(DummyFailException):
+            target.must_fail()
+
+        # メソッドの差し替え
+        import mock
+        m = mock.Mock()
+        m.returnValue = True
+        target.must_fail = m
+        self.assertTrue(target.must_fail())
+
     def test_construct(self):
         target = self._makeOne()
         self.assertEqual(target._balance, 0)
