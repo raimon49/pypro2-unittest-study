@@ -9,6 +9,8 @@ def mocked_response(status_code=200):
 
         >>> mocked_response(status_code=404).code == 404
         True
+        >>> mocked_response(status_code=404).code == 200
+        False
         >>> mocked_response(status_code=404).read() == 'mocked body'
         True
     """
