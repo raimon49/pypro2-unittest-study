@@ -47,10 +47,13 @@ class TestBankAccount(unittest.TestCase):
 
     @patch('urllib2.urlopen')
     def test_is_authorized(self, urlopen):
-        urlopen.return_value = mocked_response(status_code=200)
-
         target = self._makeOne()
+
+        urlopen.return_value = mocked_response()
         self.assertTrue(target.is_authorized())
+
+        urlopen.return_value = mocked_response(status_code=403)
+        self.assertFalse(target.is_authorized())
 
     def test_construct(self):
         target = self._makeOne()
