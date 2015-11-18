@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import urllib2
 
 
 class NoEnoughFundsException(Exception):
@@ -16,6 +17,18 @@ class BankAccount(object):
 
     def must_fail(self):
         raise DummyFailException('This is dummy')
+
+    def is_authorized(self):
+        not_authorized = False
+        try:
+            res = urllib2.urlopen('https://example.com/auth')
+            text = res.read()
+            if res.code == 200 and text is not None:
+                return True
+        except urllib2.HTTPError, e:
+            pass
+
+        return not_authorized
 
     def deposit(self, amount):
         self.balance += amount

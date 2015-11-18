@@ -1,5 +1,25 @@
 # -*- coding: utf-8 -*-
 import unittest
+from mock import patch, Mock, MagicMock, PropertyMock
+
+
+def mocked_response(status_code=200):
+    """
+    Return mocked response instance
+
+        >>> mocked_response(status_code=404).code == 404
+        True
+        >>> mocked_response(status_code=404).read() == 'mocked body'
+        True
+    """
+    code = PropertyMock()
+    code.return_value = status_code
+
+    response = MagicMock()
+    response.read.return_value = 'mocked body'
+    type(response).code = code
+
+    return response
 
 
 class TestBankAccount(unittest.TestCase):
@@ -18,13 +38,19 @@ class TestBankAccount(unittest.TestCase):
             target.must_fail()
 
         # メソッドの差し替え
-        import mock
-        m = mock.Mock()
+        m = Mock()
         m.returnValue = True
         target.must_fail = m
         self.assertFalse(m.called)
         self.assertTrue(target.must_fail())
         self.assertTrue(m.called)
+
+    @patch('urllib2.urlopen')
+    def test_is_authorized(self, urlopen):
+        urlopen.return_value = mocked_response(status_code=200)
+
+        target = self._makeOne()
+        self.assertTrue(target.is_authorized())
 
     def test_construct(self):
         target = self._makeOne()
