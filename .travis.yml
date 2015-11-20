@@ -4,4 +4,4 @@ python:
 install:
   - pip install -r tests-requirements.txt
 script:
-  py.test --doctest-modules --pep8 -v --cov=bankaccount --cov=myview
+  py.test --doctest-modules --pep8 -v --cov=bankaccount --cov=myview --cov=utility
