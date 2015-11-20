@@ -21,4 +21,5 @@ class MyView(object):
         result = s.some_method(**self.request.params)
         self.render_context = dict(result=result)
 
+        def render(page, context): pass  # empty
         return render('index.html', self.render_context)
