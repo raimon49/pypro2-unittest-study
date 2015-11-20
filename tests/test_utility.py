@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from datetime import datetime, date
+from datetime import date
 from utility import is_last_of_month
 
 
