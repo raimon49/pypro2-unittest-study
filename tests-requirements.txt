@@ -4,35 +4,40 @@
 #
 #    pip-compile --output-file tests-requirements.txt tests-requirements.in
 #
-apipkg==1.4               # via execnet
-attrs==17.4.0             # via pytest
-beautifulsoup4==4.6.0     # via webtest
-certifi==2018.1.18        # via requests
+apipkg==1.5               # via execnet
+atomicwrites==1.2.1       # via pytest
+attrs==18.2.0             # via pytest
+beautifulsoup4==4.6.3     # via webtest
+certifi==2018.10.15       # via requests
 chardet==3.0.4            # via requests
-click==6.7                # via pip-tools
-codecov==2.0.14
-coverage==4.4.2           # via codecov, pytest-cov
+click==7.0                # via pip-tools
+codecov==2.0.15
+coverage==4.5.1           # via codecov, pytest-cov
 execnet==1.5.0            # via pytest-cache
-first==2.0.1              # via pip-tools
+filelock==3.0.9           # via tox
 funcsigs==1.0.2           # via mock, pytest
-idna==2.6                 # via requests
+idna==2.7                 # via requests
 mock==2.0.0
-pbr==3.1.1                # via mock
+more-itertools==4.3.0     # via pytest
+pathlib2==2.3.2           # via pytest
+pbr==5.1.0                # via mock
 pep8==1.7.1               # via pytest-pep8
-pip-tools==1.11.0
-pluggy==0.6.0             # via pytest, tox
-py==1.5.2                 # via pytest, tox
+pip-tools==3.1.0
+pluggy==0.8.0             # via pytest, tox
+py==1.7.0                 # via pytest, tox
 pytest-cache==1.0         # via pytest-pep8
-pytest-cov==2.5.1
+pytest-cov==2.6.0
 pytest-pep8==1.0.6
-pytest-pythonpath==0.7.1
-pytest==3.3.2
-requests==2.18.4          # via codecov
-six==1.11.0               # via mock, pip-tools, pytest, tox, webtest
-testfixtures==5.4.0
-tox==2.9.1
-urllib3==1.22             # via requests
-virtualenv==15.1.0        # via tox
+pytest-pythonpath==0.7.3
+pytest==3.9.3
+requests==2.20.0          # via codecov
+scandir==1.9.0            # via pathlib2
+six==1.11.0               # via mock, more-itertools, pathlib2, pip-tools, pytest, tox, webtest
+testfixtures==6.3.0
+toml==0.10.0              # via tox
+tox==3.5.3
+urllib3==1.24             # via requests
+virtualenv==16.0.0        # via tox
 waitress==1.1.0           # via webtest
-webob==1.7.4              # via webtest
-webtest==2.0.29
+webob==1.8.3              # via webtest
+webtest==2.0.32
