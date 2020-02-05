@@ -37,7 +37,7 @@ toml==0.10.0              # via tox
 tox==3.14.2
 urllib3==1.25.7           # via requests
 virtualenv==16.7.9        # via tox
-waitress==1.4.2           # via webtest
+waitress==1.4.3           # via webtest
 wcwidth==0.1.7            # via pytest
 webob==1.8.5              # via webtest
 webtest==2.0.33
