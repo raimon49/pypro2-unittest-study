@@ -4,40 +4,97 @@
 #
 #    pip-compile tests-requirements.in
 #
-apipkg==1.5               # via execnet
-atomicwrites==1.3.0       # via pytest
-attrs==19.3.0             # via pytest
-beautifulsoup4==4.8.1     # via webtest
-certifi==2019.11.28       # via requests
-chardet==3.0.4            # via requests
-click==7.0                # via pip-tools
+apipkg==1.5
+    # via execnet
+atomicwrites==1.3.0
+    # via pytest
+attrs==19.3.0
+    # via pytest
+beautifulsoup4==4.8.1
+    # via webtest
+certifi==2019.11.28
+    # via requests
+chardet==3.0.4
+    # via requests
+click==7.0
+    # via pip-tools
 codecov==2.0.15
-coverage==5.0             # via codecov, pytest-cov
-execnet==1.7.1            # via pytest-cache
-filelock==3.0.12          # via tox
-idna==2.8                 # via requests
+    # via -r tests-requirements.in
+coverage==5.0
+    # via
+    #   codecov
+    #   pytest-cov
+execnet==1.7.1
+    # via pytest-cache
+filelock==3.0.12
+    # via tox
+idna==2.8
+    # via requests
 mock==3.0.5
-more-itertools==5.0.0     # via pytest
-packaging==19.2           # via pytest, tox
-pep8==1.7.1               # via pytest-pep8
+    # via -r tests-requirements.in
+more-itertools==5.0.0
+    # via pytest
+packaging==19.2
+    # via
+    #   pytest
+    #   tox
+pep8==1.7.1
+    # via pytest-pep8
 pip-tools==4.3.0
-pluggy==0.13.1            # via pytest, tox
-py==1.8.0                 # via pytest, tox
-pyparsing==2.4.5          # via packaging
-pytest-cache==1.0         # via pytest-pep8
+    # via -r tests-requirements.in
+pluggy==0.13.1
+    # via
+    #   pytest
+    #   tox
+py==1.10.0
+    # via
+    #   pytest
+    #   tox
+pyparsing==2.4.5
+    # via packaging
+pytest-cache==1.0
+    # via pytest-pep8
 pytest-cov==2.8.1
+    # via -r tests-requirements.in
 pytest-pep8==1.0.6
+    # via -r tests-requirements.in
 pytest-pythonpath==0.7.3
+    # via -r tests-requirements.in
 pytest==4.6.8
-requests==2.22.0          # via codecov
-six==1.13.0               # via mock, more-itertools, packaging, pip-tools, pytest, tox, webtest
-soupsieve==1.9.5          # via beautifulsoup4
+    # via
+    #   -r tests-requirements.in
+    #   pytest-cache
+    #   pytest-cov
+    #   pytest-pep8
+    #   pytest-pythonpath
+requests==2.22.0
+    # via codecov
+six==1.13.0
+    # via
+    #   mock
+    #   more-itertools
+    #   packaging
+    #   pip-tools
+    #   pytest
+    #   tox
+    #   webtest
+soupsieve==1.9.5
+    # via beautifulsoup4
 testfixtures==6.10.3
-toml==0.10.0              # via tox
+    # via -r tests-requirements.in
+toml==0.10.0
+    # via tox
 tox==3.14.2
-urllib3==1.25.7           # via requests
-virtualenv==16.7.9        # via tox
-waitress==1.4.3           # via webtest
-wcwidth==0.1.7            # via pytest
-webob==1.8.5              # via webtest
+    # via -r tests-requirements.in
+urllib3==1.25.7
+    # via requests
+virtualenv==16.7.9
+    # via tox
+waitress==1.4.3
+    # via webtest
+wcwidth==0.1.7
+    # via pytest
+webob==1.8.5
+    # via webtest
 webtest==2.0.33
+    # via -r tests-requirements.in
