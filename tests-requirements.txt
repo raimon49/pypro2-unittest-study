@@ -52,6 +52,13 @@ py==1.10.0
     #   tox
 pyparsing==2.4.5
     # via packaging
+pytest==4.6.8
+    # via
+    #   -r tests-requirements.in
+    #   pytest-cache
+    #   pytest-cov
+    #   pytest-pep8
+    #   pytest-pythonpath
 pytest-cache==1.0
     # via pytest-pep8
 pytest-cov==2.8.1
@@ -60,13 +67,6 @@ pytest-pep8==1.0.6
     # via -r tests-requirements.in
 pytest-pythonpath==0.7.3
     # via -r tests-requirements.in
-pytest==4.6.8
-    # via
-    #   -r tests-requirements.in
-    #   pytest-cache
-    #   pytest-cov
-    #   pytest-pep8
-    #   pytest-pythonpath
 requests==2.22.0
     # via codecov
 six==1.13.0
@@ -90,7 +90,7 @@ urllib3==1.25.8
     # via requests
 virtualenv==16.7.9
     # via tox
-waitress==1.4.3
+waitress==2.1.1
     # via webtest
 wcwidth==0.1.7
     # via pytest
