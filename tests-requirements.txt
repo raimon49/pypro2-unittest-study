@@ -90,7 +90,7 @@ urllib3==1.25.8
     # via requests
 virtualenv==16.7.9
     # via tox
-waitress==2.1.1
+waitress==2.1.2
     # via webtest
 wcwidth==0.1.7
     # via pytest
