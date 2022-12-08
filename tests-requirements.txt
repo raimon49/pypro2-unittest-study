@@ -12,7 +12,7 @@ attrs==19.3.0
     # via pytest
 beautifulsoup4==4.8.1
     # via webtest
-certifi==2019.11.28
+certifi==2022.12.7
     # via requests
 chardet==3.0.4
     # via requests
@@ -86,7 +86,7 @@ toml==0.10.0
     # via tox
 tox==3.14.2
     # via -r tests-requirements.in
-urllib3==1.26.5
+urllib3==1.25.11
     # via requests
 virtualenv==16.7.9
     # via tox
