@@ -28,7 +28,7 @@ execnet==1.7.1
     # via pytest-cache
 filelock==3.0.12
     # via tox
-idna==2.8
+idna==3.7
     # via requests
 mock==3.0.5
     # via -r tests-requirements.in
