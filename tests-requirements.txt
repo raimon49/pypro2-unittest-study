@@ -12,7 +12,7 @@ attrs==19.3.0
     # via pytest
 beautifulsoup4==4.8.1
     # via webtest
-certifi==2023.7.22
+certifi==2024.7.4
     # via requests
 charset-normalizer==3.3.2
     # via requests
