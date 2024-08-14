@@ -94,7 +94,7 @@ waitress==2.1.2
     # via webtest
 wcwidth==0.1.7
     # via pytest
-webob==1.8.5
+webob==1.8.8
     # via webtest
 webtest==2.0.33
     # via -r tests-requirements.in
