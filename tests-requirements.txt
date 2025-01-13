@@ -24,10 +24,14 @@ coverage==5.0
     # via
     #   codecov
     #   pytest-cov
+distlib==0.3.9
+    # via virtualenv
 execnet==1.7.1
     # via pytest-cache
-filelock==3.0.12
-    # via tox
+filelock==3.16.1
+    # via
+    #   tox
+    #   virtualenv
 idna==3.7
     # via requests
 mock==3.0.5
@@ -42,6 +46,8 @@ pep8==1.7.1
     # via pytest-pep8
 pip-tools==4.3.0
     # via -r tests-requirements.in
+platformdirs==4.3.6
+    # via virtualenv
 pluggy==0.13.1
     # via
     #   pytest
@@ -88,7 +94,7 @@ tox==3.14.2
     # via -r tests-requirements.in
 urllib3==1.26.19
     # via requests
-virtualenv==16.7.9
+virtualenv==20.26.6
     # via tox
 waitress==3.0.1
     # via webtest
